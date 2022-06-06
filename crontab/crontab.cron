@@ -1,0 +1,7 @@
+# crontab task lists
+
+# update repos on time
+0 6,14,22 * * * ./gitpull.sh
+
+# delete wechat cache on time
+0 22 * * * ./delwc.sh
