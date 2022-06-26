@@ -52,6 +52,19 @@ function install_theme4typora()
     echo "themes installed!"
 }
 
+function install_vscodetheme()
+{
+    pkg=("github-vscode-theme-dark-classic-1.1.5")
+    code --install-extension ${pkg[*]}.vsix
+}
+
+function install_fonts()
+{
+    cp ./fonts/Hack/* /System/Library/Fonts
+    cp ./fonts/IBM\ Plex/* /System/Library/Fonts
+    cp ./fonts/Source\ Code\ Pro/* /System/Library/Fonts
+}
+
 function lines()
 {
     echo "====================================="
@@ -73,6 +86,10 @@ function main()
     cfg_gitignore
     lines
     cfg_gitpaging
+    lines
+    install_fonts
+    lines
+    install_vscodetheme
     lines
     zsh
     echo "All done, enjoys!"
