@@ -48,6 +48,7 @@ function cfg_gitpaging()
 
 function install_theme4typora()
 {
+    rm -rf Library/Application\ Support/abnerworks.Typora/themes/*
     cp -r ./typora-themes/* $HOME/Library/Application\ Support/abnerworks.Typora/themes
     echo "themes installed!"
 }
