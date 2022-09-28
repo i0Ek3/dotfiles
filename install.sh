@@ -61,9 +61,7 @@ function install_vscodetheme()
 
 function install_fonts()
 {
-    cp ./fonts/Hack/* /System/Library/Fonts
-    cp ./fonts/IBM\ Plex/* /System/Library/Fonts
-    cp ./fonts/Source\ Code\ Pro/* /System/Library/Fonts
+    cp ./fonts/* /System/Library/Fonts
 }
 
 function lines()
@@ -91,6 +89,8 @@ function main()
     install_fonts
     lines
     install_vscodetheme
+    lines
+    install_theme4typora
     lines
     zsh
     echo "All done, enjoys!"
