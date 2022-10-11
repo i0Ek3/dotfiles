@@ -15,8 +15,9 @@ function cfg_pip()
 function cfg_zshrc()
 {
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-    cp -r ./zsh/zshrc-mac $HOME/.zshrc
     zsh
+    cp -r ./zsh/zshrc-mac $HOME/.zshrc
+    cp -r ./zsh/zsh-plugin/* $HOME/.oh-my-zsh/custom/plugins
     echo "zshrc configurated!"
 }
 
